@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="addPane" alignment="CENTER" prefHeight="550.0" prefWidth="850.0"
+      style="-fx-background-color: #f8fafc;"
+      stylesheets="@../styles/style.css"
+      xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.studentattendance.controller.AddAccountController">
+    <children>
+        <VBox alignment="CENTER_LEFT" maxWidth="450.0" spacing="0.0" styleClass="card-elevated">
+            <children>
+                <HBox alignment="CENTER">
+                    <children>
+                        <Label styleClass="badge" text="ACCOUNT SETTINGS" />
+                    </children>
+                    <VBox.margin>
+                        <Insets bottom="10.0" />
+                    </VBox.margin>
+                </HBox>
+
+                <Label alignment="CENTER" maxWidth="1.7976931348623157E308" styleClass="heading-1" text="Account Management" textAlignment="CENTER" />
+                <Label alignment="CENTER" maxWidth="1.7976931348623157E308" styleClass="text-muted" text="Enter account details to add or modify user credentials." textAlignment="CENTER">
+                    <VBox.margin>
+                        <Insets bottom="24.0" top="4.0" />
+                    </VBox.margin>
+                </Label>
+
+                <VBox spacing="14.0">
+                    <children>
+                        <VBox spacing="6.0">
+                            <children>
+                                <Label style="-fx-font-weight: 600; -fx-text-fill: #334155;" text="Username" />
+                                <TextField fx:id="username" prefHeight="40.0" promptText="Enter username..." />
+                            </children>
+                        </VBox>
+
+                        <VBox spacing="6.0">
+                            <children>
+                                <Label style="-fx-font-weight: 600; -fx-text-fill: #334155;" text="Password" />
+                                <PasswordField fx:id="password" prefHeight="40.0" promptText="Enter password..." />
+                            </children>
+                        </VBox>
+
+                        <CheckBox fx:id="check" styleClass="check-box" text="Administrator Privileges">
+                            <VBox.margin>
+                                <Insets bottom="6.0" top="4.0" />
+                            </VBox.margin>
+                        </CheckBox>
+
+                        <VBox spacing="10.0">
+                            <children>
+                                <Button maxWidth="1.7976931348623157E308" onAction="#onAdd" prefHeight="42.0" styleClass="button" text="Save Account" />
+                                <Button maxWidth="1.7976931348623157E308" onAction="#onBack" prefHeight="38.0" styleClass="btn-secondary" text="Back to Accounts" />
+                            </children>
+                            <VBox.margin>
+                                <Insets top="10.0" />
+                            </VBox.margin>
+                        </VBox>
+                    </children>
+                </VBox>
+            </children>
+        </VBox>
+    </children>
+</VBox>

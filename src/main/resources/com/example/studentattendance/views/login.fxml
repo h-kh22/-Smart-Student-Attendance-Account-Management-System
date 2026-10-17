@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="root" prefHeight="580.0" prefWidth="850.0"
+            style="-fx-background-color: linear-gradient(to bottom right, #0f172a, #1e293b, #0f172a);"
+            stylesheets="@../styles/style.css"
+            xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.studentattendance.controller.LoginController">
+    <children>
+        <!-- Center Form Card inside StackPane; pickOnBounds=false allows clicks outside the card to reach AnchorPane children -->
+        <StackPane pickOnBounds="false"
+                   AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                   AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <VBox alignment="CENTER" maxWidth="420.0" spacing="0.0" styleClass="card-elevated">
+                    <children>
+                        <!-- Header / Branding -->
+                        <HBox alignment="CENTER" spacing="8.0">
+                            <children>
+                                <Label styleClass="badge" text="%login.badge" />
+                            </children>
+                            <VBox.margin>
+                                <Insets bottom="10.0" />
+                            </VBox.margin>
+                        </HBox>
+
+                        <Label styleClass="heading-1" text="%login.title" textAlignment="CENTER" />
+                        <Label fx:id="modeLabel" styleClass="text-muted"
+                               text="%login.subtitle.signin" textAlignment="CENTER">
+                            <VBox.margin>
+                                <Insets bottom="24.0" top="4.0" />
+                            </VBox.margin>
+                        </Label>
+
+                        <!-- Form Fields -->
+                        <VBox spacing="14.0">
+                            <children>
+                                <VBox spacing="6.0">
+                                    <children>
+                                        <Label style="-fx-font-weight: 600; -fx-text-fill: #334155;"
+                                               text="%login.label.username" />
+                                        <TextField fx:id="usernameField" prefHeight="40.0"
+                                                   promptText="%login.prompt.username" />
+                                    </children>
+                                </VBox>
+
+                                <VBox spacing="6.0">
+                                    <children>
+                                        <Label style="-fx-font-weight: 600; -fx-text-fill: #334155;"
+                                               text="%login.label.password" />
+                                        <PasswordField fx:id="passwordField" prefHeight="40.0"
+                                                       promptText="%login.prompt.password" />
+                                    </children>
+                                </VBox>
+
+                                <VBox spacing="6.0">
+                                    <children>
+                                        <Label fx:id="confirmPasswordLabel" managed="false"
+                                               style="-fx-font-weight: 600; -fx-text-fill: #334155;"
+                                               text="%login.label.confirm" visible="false" />
+                                        <PasswordField fx:id="confirmPasswordField" managed="false"
+                                                       prefHeight="40.0"
+                                                       promptText="%login.prompt.confirm"
+                                                       visible="false" />
+                                    </children>
+                                </VBox>
+
+                                <Button fx:id="submitButton"
+                                        maxWidth="1.7976931348623157E308"
+                                        onAction="#handleSubmitButtonAction"
+                                        prefHeight="42.0" styleClass="button"
+                                        text="%login.btn.signin">
+                                    <VBox.margin>
+                                        <Insets top="10.0" />
+                                    </VBox.margin>
+                                </Button>
+
+                                <Label fx:id="message" alignment="CENTER"
+                                       maxWidth="1.7976931348623157E308"
+                                       styleClass="text-danger" textAlignment="CENTER"
+                                       wrapText="true">
+                                    <VBox.margin>
+                                        <Insets top="6.0" />
+                                    </VBox.margin>
+                                </Label>
+                            </children>
+                        </VBox>
+                    </children>
+                </VBox>
+            </children>
+        </StackPane>
+
+        <Button fx:id="langToggleBtn"
+                onAction="#handleLangToggle"
+                styleClass="lang-toggle-btn"
+                text="&#127760; &#1593;&#1585;&#1576;&#1610;"
+                AnchorPane.topAnchor="18.0"
+                AnchorPane.rightAnchor="24.0">
+        </Button>
+
+        <!-- ═══════════════════════════════════════════════════════════════════
+             COPYRIGHT NOTICE  –  Static display label only.
+             Key: app.copyright | No fx:id | No event handler | No controller
+             © 2026 Hani Al-khateeb. All Rights Reserved.
+             ═══════════════════════════════════════════════════════════════════ -->
+        <Label text="%app.copyright"
+               style="-fx-text-fill: rgba(255,255,255,0.38);
+                      -fx-font-size: 10px;
+                      -fx-font-style: italic;"
+               AnchorPane.bottomAnchor="10.0"
+               AnchorPane.leftAnchor="0.0"
+               AnchorPane.rightAnchor="0.0"
+               alignment="CENTER"
+               mouseTransparent="true"
+               pickOnBounds="false" />
+    </children>
+</AnchorPane>

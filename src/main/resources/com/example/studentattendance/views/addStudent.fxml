@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="addStudent" prefHeight="620.0" prefWidth="850.0"
+            style="-fx-background-color: #f8fafc;"
+            stylesheets="@../styles/style.css"
+            xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.studentattendance.controller.AddStudentController">
+    <children>
+        <StackPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <VBox alignment="CENTER_LEFT" maxWidth="500.0" spacing="0.0" styleClass="card-elevated">
+                    <children>
+                        <HBox alignment="CENTER">
+                            <children>
+                                <Label styleClass="badge" text="%addstudent.badge" />
+                            </children>
+                            <VBox.margin>
+                                <Insets bottom="10.0" />
+                            </VBox.margin>
+                        </HBox>
+
+                        <Label alignment="CENTER" maxWidth="1.7976931348623157E308" styleClass="heading-1" text="%addstudent.title" textAlignment="CENTER" />
+                        <Label alignment="CENTER" maxWidth="1.7976931348623157E308" styleClass="text-muted" text="%addstudent.subtitle" textAlignment="CENTER">
+                            <VBox.margin>
+                                <Insets bottom="24.0" top="4.0" />
+                            </VBox.margin>
+                        </Label>
+
+                        <VBox spacing="14.0">
+                            <children>
+                                <VBox spacing="6.0">
+                                    <children>
+                                        <Label style="-fx-font-weight: 600; -fx-text-fill: #334155;" text="%addstudent.name" />
+                                        <TextField fx:id="nameTextField" prefHeight="40.0" promptText="%addstudent.prompt.name" />
+                                    </children>
+                                </VBox>
+
+                                <VBox spacing="6.0">
+                                    <children>
+                                        <Label style="-fx-font-weight: 600; -fx-text-fill: #334155;" text="%addstudent.phone" />
+                                        <TextField fx:id="phoneNumberTextField" prefHeight="40.0" promptText="%addstudent.prompt.phone" />
+                                    </children>
+                                </VBox>
+
+                                <VBox spacing="6.0">
+                                    <children>
+                                        <Label style="-fx-font-weight: 600; -fx-text-fill: #334155;" text="%addstudent.residence" />
+                                        <TextField fx:id="residenceAreaTextField" prefHeight="40.0" promptText="%addstudent.prompt.residence" />
+                                    </children>
+                                </VBox>
+
+                                <VBox spacing="6.0">
+                                    <children>
+                                        <Label style="-fx-font-weight: 600; -fx-text-fill: #334155;" text="%addstudent.gender" />
+                                        <HBox spacing="24.0">
+                                            <children>
+                                                <RadioButton fx:id="maleRadioButton" styleClass="radio-button" text="%addstudent.gender.male" />
+                                                <RadioButton fx:id="femaleRadioButton" styleClass="radio-button" text="%addstudent.gender.female" />
+                                            </children>
+                                            <VBox.margin>
+                                                <Insets top="4.0" />
+                                            </VBox.margin>
+                                        </HBox>
+                                    </children>
+                                </VBox>
+
+                                <VBox spacing="10.0">
+                                    <children>
+                                        <Button fx:id="saveButton" maxWidth="1.7976931348623157E308" prefHeight="42.0" styleClass="button" text="%addstudent.btn.save" />
+                                        <Button fx:id="backButton" maxWidth="1.7976931348623157E308" prefHeight="38.0" styleClass="btn-secondary" text="%addstudent.btn.back" />
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets top="12.0" />
+                                    </VBox.margin>
+                                </VBox>
+                            </children>
+                        </VBox>
+                    </children>
+                </VBox>
+            </children>
+        </StackPane>
+    </children>
+</AnchorPane>
